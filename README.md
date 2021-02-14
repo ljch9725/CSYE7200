@@ -1,7 +1,2 @@
 # CSYE7200
-Name:Jianchao Li
-
-NUID:001054645
-
-Assignment for CSYE7200
-
+Public repository without solutions for CSYE7200

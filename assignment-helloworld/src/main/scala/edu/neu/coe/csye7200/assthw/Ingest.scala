@@ -32,13 +32,10 @@ object Ingest extends App {
   val ingester = new Ingest[Movie]()
   val source = args.toList match {
     case Nil => Source.fromResource("movie_metadata_5000.csv")
-    //case Nil => Source.fromFile("assignment-helloworld/kaggle/imdb-5000-movie-dataset.csv")
     case h :: _ => Source.fromFile(h)
   }
 
-  //for (m <- ingester(source)) println(m.properties.mkString(", "))
-  val kiwiMovies = for (m <- ingester(source); if (m.properties(20) == "New Zealand")) yield m
-  println(kiwiMovies.size)
+  for (m <- ingester(source)) println(m.properties.mkString(", "))
   source.close()
 
   // Please note that an alternative to the definition of source above would be as in the following comment:
