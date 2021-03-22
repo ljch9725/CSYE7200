@@ -26,15 +26,30 @@
 //
 //drop(List(1, 2, 3, 4))(2)
 
-def log[X](x: X)(messageFunction: X => String): X = {
-  val w: String = messageFunction(x)
-  println(w)
-  x
-}
+//def log[X](x: X)(messageFunction: X => String): X = {
+//  val w: String = messageFunction(x)
+//  println(w)
+//  x
+//}
+//
+//def xToString[Any](x: Any): String = s"result $x"
+//
+//val x = log(Math.PI * Math.PI)(xToString _)
+//
+//val logSimple: (Double => Double) = log(_)(xToString)
+//val y = logSimple(Math.PI * Math.PI)
 
-def xToString[Any](x: Any): String = s"result $x"
+//val teamA: Array[Int] = Array(1, 4, 2, 4)
+//
+//val teamB: Array[Int] = Array(3, 5)
+//
+//def counts(teamA: Array[Int], teamB: Array[Int]): Array[Int] = {
+//  val z = for (a <- teamA; b <- teamB; if a <= b) yield (a, b)
+//  val m = z.groupBy(p => p._2)
+//  val q = for ((_, v) <- m) yield v.length
+//  q.toArray
+//}
+//counts(teamA, teamB)
 
-val x = log(Math.PI * Math.PI)(xToString _)
 
-val logSimple: (Double => Double) = log(_)(xToString)
-val y = logSimple(Math.PI * Math.PI)
+
